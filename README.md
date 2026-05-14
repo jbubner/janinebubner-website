@@ -1,13 +1,10 @@
-# Janine Bubner Website — CEO Vibe Version
+# Janine Bubner Launch Ready Website
 
-Files:
-- index.html
-- api/contact.js
-- package.json
-- vercel.json
+Upload all files to GitHub and deploy with Vercel.
 
-Vercel Environment Variables:
+Environment variables for contact form:
 RESEND_API_KEY=your_resend_api_key
 MANAGEMENT_EMAIL=your_private_email@example.com
 
-Replace the Unsplash image URLs in index.html later with Janine's own stage, cycling, portrait and creative images.
+Hero headline: Insights that move people. Impact that lasts.
+Events: Stuttgart = Keynote Speaker & Panelist; Paris = Moderator.
