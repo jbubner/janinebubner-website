@@ -1,9 +1,1 @@
-{
-  "name": "janinebubner-ceo-vibe-website",
-  "version": "3.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "vercel dev",
-    "deploy": "vercel --prod"
-  }
-}
+{"name":"janinebubner-site","version":"1.0.0","private":true}
