@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Janine Bubner | Beyond Performance</title>
+  <meta name="description" content="Janine Bubner is a former professional cyclist, keynote speaker, moderator, author and creative voice behind Beyond Performance." />
+  <meta name="keywords" content="Janine Bubner, keynote speaker, moderator, former cyclist, German national team, Beyond Performance, leadership, resilience, performance, AI, mobility" />
+
+  <meta property="og:title" content="Janine Bubner | Beyond Performance" />
+  <meta property="og:description" content="Former professional cyclist. Keynote speaker. Moderator. Author. Creative." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/janine-og.jpg" />
+
+  <style>
+    :root {
+      --cream: #f6f1e8;
+      --sand: #d8c3a5;
+      --navy: #111827;
+      --green: #23352d;
+      --gold: #b8945b;
+      --white: #ffffff;
+      --muted: #6b7280;
+      --line: rgba(17, 24, 39, 0.10);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background: var(--cream);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      line-height: 1.08;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(17, 24, 39, 0.36), rgba(17, 24, 39, 0.76)),
+        url("https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
+      color: var(--white);
+      padding: 32px 7vw 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content { max-width: 940px; }
+
+    .eyebrow {
+      color: #ead7b5;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(58px, 10vw, 128px);
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: clamp(20px, 2.4vw, 34px);
+      max-width: 820px;
+      margin-bottom: 34px;
+    }
+
+    .buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .btn {
+      padding: 14px 26px;
+      border: 1px solid var(--white);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
+      transition: 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn.primary { background: var(--white); color: var(--navy); }
+    .btn:hover { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+
+    section { padding: 92px 7vw; }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      background: var(--white);
+      align-items: center;
+    }
+
+    .quote {
+      font-size: clamp(32px, 4vw, 58px);
+      color: var(--green);
+    }
+
+    .copy p, .section-title p, .book p, .contact p, .press p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 820px;
+    }
+
+    .section-title { max-width: 860px; margin-bottom: 48px; }
+    .section-title h2, .contact h2, .press h2 {
+      font-size: clamp(42px, 5vw, 76px);
+      margin-bottom: 16px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 38px;
+      border: 1px solid var(--line);
+      min-height: 260px;
+    }
+
+    .card h3 {
+      font-size: 31px;
+      margin-bottom: 16px;
+      color: var(--green);
+    }
+
+    .card p { color: var(--muted); }
+
+    .legacy {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .legacy-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .legacy h2 { font-size: clamp(42px, 5vw, 76px); margin-bottom: 20px; }
+    .legacy p { font-size: 19px; color: #dce4df; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .stat {
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.04);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      font-family: Georgia, serif;
+      margin-bottom: 8px;
+    }
+
+    .book { background: var(--white); }
+
+    .book-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .book h2 {
+      font-size: clamp(42px, 5vw, 76px);
+      margin-bottom: 18px;
+    }
+
+    .topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .topic {
+      padding: 13px 17px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+
+    .creative {
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .creative-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 56px;
+      align-items: stretch;
+      margin-top: 34px;
+    }
+
+    .creative-visual {
+      min-height: 520px;
+      background:
+        linear-gradient(rgba(35, 53, 45, 0.12), rgba(35, 53, 45, 0.34)),
+        url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=85") center/cover no-repeat;
+      border: 1px solid var(--line);
+    }
+
+    .creative-copy {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .creative-copy h3 {
+      font-size: clamp(34px, 4vw, 58px);
+      color: var(--green);
+      margin-bottom: 18px;
+    }
+
+    .creative-copy p {
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
+
+    .creative-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .creative-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 30px;
+      min-height: 190px;
+    }
+
+    .creative-card span {
+      display: block;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      font-size: 11px;
+      margin-bottom: 16px;
+    }
+
+    .creative-card strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--green);
+      font-size: 29px;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+
+    .creative-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+
+    .press {
+      background: var(--cream);
+    }
+
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .press-item {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 24px;
+    }
+
+    .press-item strong {
+      display: block;
+      font-family: Georgia, serif;
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: var(--green);
+    }
+
+    .contact {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .contact p { color: #c7ced8; }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 36px;
+      max-width: 980px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.08);
+      color: var(--white);
+      font-size: 15px;
+      border-radius: 0;
+    }
+
+    input::placeholder, textarea::placeholder { color: rgba(255,255,255,.62); }
+
+    select option { color: var(--navy); }
+
+    textarea {
+      grid-column: span 2;
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    .full { grid-column: span 2; }
+
+    .hidden-field {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+
+    button {
+      padding: 16px 24px;
+      background: var(--gold);
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      color: var(--navy);
+      min-width: 230px;
+    }
+
+    .form-status {
+      margin-top: 18px;
+      font-size: 15px;
+      color: #e9d7b8;
+    }
+
+    .footer {
+      padding: 30px 7vw;
+      background: #0b1220;
+      color: #c7ced8;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .intro, .legacy-grid, .card-grid, .book-inner, .creative-layout, .creative-grid, .press-grid, form {
+        grid-template-columns: 1fr;
+      }
+      textarea, .full { grid-column: span 1; }
+      .nav { align-items: flex-start; gap: 18px; flex-direction: column; }
+      section { padding: 72px 6vw; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div>Janine Bubner</div>
+      <div class="nav-links">
+        <a href="#speaking">Speaking</a>
+        <a href="#legacy">Legacy</a>
+        <a href="#book">Book</a>
+        <a href="#creative">Creative</a>
+        <a href="#press">Press</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <div class="eyebrow">Athlete • Speaker • Author • Creative</div>
+      <h1>Beyond Performance</h1>
+      <p>A life built in elite sport. A voice shaped for leadership, resilience, transformation and modern performance.</p>
+      <div class="buttons">
+        <a href="#contact" class="btn primary">Request Janine</a>
+        <a href="#book" class="btn">Explore the Book</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="intro">
+    <div class="quote">“Performance is never just about winning. It’s about who you become under pressure.”</div>
+    <div class="copy">
+      <p>Janine Bubner combines elite sport, executive technology leadership and authentic storytelling. From German national team cycling to international stages, she brings precision, resilience and strategic perspective to keynotes, panels and executive moderation.</p>
+    </div>
+  </section>
+
+  <section id="speaking">
+    <div class="section-title">
+      <h2>Speaking & Events</h2>
+      <p>Available for conferences, executive panels, moderation, leadership events, brand partnerships and sponsorship collaborations.</p>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Keynotes</h3>
+        <p>High-performance leadership, resilience, reinvention, women in leadership, athlete mindset, transformation and AI-era performance culture.</p>
+      </div>
+      <div class="card">
+        <h3>Panels</h3>
+        <p>Mobility, AI, future technology, human decision-making, innovation ecosystems, entrepreneurship and modern leadership.</p>
+      </div>
+      <div class="card">
+        <h3>Moderation</h3>
+        <p>Executive discussions, fireside chats, conference hosting and curated thought leadership conversations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="legacy" class="legacy">
+    <div class="legacy-grid">
+      <div>
+        <h2>Elite Sport Legacy</h2>
+        <p>Built in elite sport. Shaped by pressure. Driven by precision. Janine’s cycling career creates the foundation for her work on performance, resilience and leadership under pressure.</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><strong>German National Team</strong>Elite cycling career</div>
+        <div class="stat"><strong>London 2012</strong>Olympic qualification pathway</div>
+        <div class="stat"><strong>Multiple Titles</strong>German championship success</div>
+        <div class="stat"><strong>World Stage</strong>World Cup and championship experience</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" class="book">
+    <div class="book-inner">
+      <div>
+        <h2>Beyond Performance — The Book</h2>
+        <p>A personal story about ambition, pressure, elite sport, motherhood, leadership and rebuilding identity beyond performance.</p>
+      </div>
+      <div>
+        <div class="topics">
+          <div class="topic">Resilience</div>
+          <div class="topic">Leadership</div>
+          <div class="topic">Elite Performance</div>
+          <div class="topic">Women in High-Pressure Environments</div>
+          <div class="topic">AI & Human Decisions</div>
+          <div class="topic">Transformation</div>
+          <div class="topic">Athlete Mindset</div>
+          <div class="topic">Beyond Systems</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="creative" class="creative">
+    <div class="section-title">
+      <h2>Creative Practice</h2>
+      <p>Performance meets creativity. Beyond elite sport and technology leadership, Janine’s creative work explores storytelling, aesthetics, design thinking and visual expression.</p>
+    </div>
+
+    <div class="creative-layout">
+      <div class="creative-visual" aria-label="Creative studio and artistic work"></div>
+
+      <div class="creative-copy">
+        <h3>Where discipline meets imagination.</h3>
+        <p>Janine’s creative practice connects the precision of elite sport with the emotional intelligence of storytelling, design and visual expression. It adds a multidimensional perspective to her work as a speaker, author and moderator.</p>
+        <p>Not as decoration — but as a way to translate pressure, identity, leadership and transformation into something people can feel.</p>
+      </div>
+    </div>
+
+    <div class="creative-grid">
+      <div class="creative-card">
+        <span>01</span>
+        <strong>Writing</strong>
+        <p>Book development, essays, thought leadership and narrative work around performance, identity and reinvention.</p>
+      </div>
+      <div class="creative-card">
+        <span>02</span>
+        <strong>Design</strong>
+        <p>Creative direction, product thinking, aesthetics, material culture and design-led ventures.</p>
+      </div>
+      <div class="creative-card">
+        <span>03</span>
+        <strong>Visual Art</strong>
+        <p>Selected explorations, visual concepts and artistic work shaped by movement, emotion and atmosphere.</p>
+      </div>
+      <div class="creative-card">
+        <span>04</span>
+        <strong>Brand Collaborations</strong>
+        <p>Premium storytelling across sport, luxury, design, innovation and high-performance culture.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="press" class="press">
+    <div class="section-title">
+      <h2>Media & Press</h2>
+      <p>For press features, interviews, podcasts, event materials and speaker assets, please submit a request through management.</p>
+    </div>
+
+    <div class="press-grid">
+      <div class="press-item"><strong>Bio</strong>Short and long speaker biography.</div>
+      <div class="press-item"><strong>Photos</strong>Portrait, stage and sport visuals.</div>
+      <div class="press-item"><strong>Topics</strong>Keynote and panel themes.</div>
+      <div class="press-item"><strong>Book</strong>Updates on Beyond Performance.</div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Management Requests</h2>
+    <p>For keynote invitations, moderation requests, sponsorships, collaborations, media interviews or book inquiries.</p>
+
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="company" placeholder="Company / Organization" />
+      <select name="eventType" required>
+        <option value="">Event Type</option>
+        <option>Keynote Request</option>
+        <option>Panel Invitation</option>
+        <option>Moderator Request</option>
+        <option>Sponsorship</option>
+        <option>Media Interview</option>
+        <option>Book Inquiry</option>
+        <option>Creative Collaboration</option>
+        <option>Other</option>
+      </select>
+      <input type="text" name="eventDate" placeholder="Event Date" />
+      <input type="text" name="location" placeholder="Event Location" />
+      <input type="text" name="budget" placeholder="Budget Range" />
+      <input type="text" name="website" placeholder="Website" />
+
+      <input class="hidden-field" type="text" name="botField" tabindex="-1" autocomplete="off" />
+
+      <textarea name="message" placeholder="Tell management about your request..." required></textarea>
+
+      <div class="full">
+        <button type="submit">Send Request to Management</button>
+        <div id="formStatus" class="form-status" aria-live="polite"></div>
+      </div>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div>© 2026 Janine Bubner — Beyond Performance</div>
+    <div>Speaking • Panels • Moderation • Sponsorship</div>
+  </footer>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const statusBox = document.getElementById("formStatus");
+
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+      statusBox.textContent = "Sending request...";
+
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          throw new Error(result.error || "Something went wrong.");
+        }
+
+        statusBox.textContent = "Thank you. Your request has been sent to management.";
+        form.reset();
+      } catch (error) {
+        statusBox.textContent = "The message could not be sent. Please try again.";
+      }
+    });
+  </script>
+</body>
+</html>
