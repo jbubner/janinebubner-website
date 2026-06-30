@@ -26,8 +26,7 @@ export default async function handler(req, res) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const toEmail = process.env.MANAGEMENT_EMAIL;
-
+  const toEmail = process.env.CONTACT_TO;
   if (!apiKey || !toEmail) {
     return res.status(500).json({ error: "Email service is not configured" });
   }
