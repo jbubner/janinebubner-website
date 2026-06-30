@@ -1,12 +1,9 @@
 {
-  "name": "janinebubner-personal-site",
+  "name": "janinebubner-website",
   "version": "1.0.0",
   "private": true,
-  "description": "Personal speaker and author website for Janine Bubner",
-  "scripts": {
-    "dev": "vercel dev",
-    "deploy": "vercel --prod"
-  },
-  "dependencies": {},
-  "devDependencies": {}
+  "type": "module",
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
 }

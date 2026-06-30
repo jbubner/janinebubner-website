@@ -177,7 +177,7 @@ footer{padding:28px 6vw;background:var(--midnight);color:rgba(248,244,236,.48);d
   <div class="events-grid">
     <div class="event">
       <div class="event-logo"><div class="logo-ecv">ECV</div></div>
-      <div><h3>European AI & Software-Defined Vehicle Summit</h3><p>Stuttgart, Germany<br><strong>2026 | Keynote Speaker & Panelist</strong></p></div>
+      <div><h3><a href="summit.html" style="color:inherit;text-decoration:none;">European AI & Software-Defined Vehicle Summit</a></h3><p>Stuttgart, Germany<br><strong>2026 | Keynote Speaker & Panelist</strong></p></div>
     </div>
     <div class="event">
       <div class="event-logo"><div class="logo-carapp">CAR APP<br>WORLD<small>EUROPE</small></div></div>
@@ -262,11 +262,12 @@ footer{padding:28px 6vw;background:var(--midnight);color:rgba(248,244,236,.48);d
 
 <section id="contact" class="contact">
   <div><div class="kicker">Bookings & Inquiries</div><h2>Let’s create impact together.</h2><p>For keynote invitations, moderation requests, sponsorships, collaborations, media interviews and book inquiries for 2026/2027.</p></div>
-  <form onsubmit="event.preventDefault();document.getElementById('status').textContent='Thank you. Your request has been prepared. Connect a form provider to send it.';">
-    <input placeholder="Full Name" required><input placeholder="Email Address" type="email" required>
-    <input placeholder="Company / Organization"><select required><option value="">Request Type</option><option>Keynote Request</option><option>Panel Invitation</option><option>Moderator Request</option><option>Sponsorship</option><option>Media Interview</option><option>Book Inquiry</option></select>
-    <input placeholder="Event Date"><input placeholder="Event Location">
-    <textarea placeholder="Message" required></textarea>
+  <form action="/api/contact" method="POST">
+    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+    <input name="name" placeholder="Full Name" required><input name="email" placeholder="Email Address" type="email" required>
+    <input name="company" placeholder="Company / Organization"><select name="requestType" required><option value="">Request Type</option><option>Keynote Request</option><option>Panel Invitation</option><option>Moderator Request</option><option>Sponsorship</option><option>Media Interview</option><option>Book Inquiry</option></select>
+    <input name="eventDate" placeholder="Event Date"><input name="eventLocation" placeholder="Event Location">
+    <textarea name="message" placeholder="Message" required></textarea>
     <div class="full"><button class="btn primary" type="submit">Send Inquiry →</button></div>
     <p id="status" style="color:var(--gold2);"></p>
   </form>
