@@ -1,29 +1,37 @@
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   try {
     if (req.method !== "POST") {
       return res.status(405).send("Method not allowed");
     }
 
-    const data = req.body || {};
+    const {
+      name = "",
+      email = "",
+      company = "",
+      eventType = "",
+      eventDate = "",
+      location = "",
+      budget = "",
+      website = "",
+      message = "",
+      botField = ""
+    } = req.body || {};
 
-    const name = data.name || "";
-    const email = data.email || "";
-    const company = data.company || "";
-    const requestType = data.requestType || data.eventType || "";
-    const eventDate = data.eventDate || "";
-    const eventLocation = data.eventLocation || data.location || "";
-    const message = data.message || "";
-
-    const apiKey = process.env.RESEND_API_KEY;
-    const toEmail = process.env.CONTACT_TO || process.env.MANAGEMENT_EMAIL;
-    const fromEmail = process.env.CONTACT_FROM || "Janine Bubner Website <onboarding@resend.dev>";
-
-    if (!apiKey) {
-      return res.status(500).send("Missing RESEND_API_KEY");
+    if (botField) {
+      return res.status(200).json({ ok: true });
     }
 
-    if (!toEmail) {
-      return res.status(500).send("Missing CONTACT_TO");
+    if (!name || !email || !eventType || !message) {
+      return res.status(400).send("Missing required fields");
+    }
+
+    const apiKey = process.env.RESEND_API_KEY;
+    const toEmail =
+      process.env.CONTACT_TO ||
+      process.env.MANAGEMENT_EMAIL;
+
+    if (!apiKey || !toEmail) {
+      return res.status(500).send("Email service is not configured");
     }
 
     const response = await fetch("https://api.resend.com/emails", {
@@ -33,31 +41,47 @@ export default async function handler(req, res) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        from: fromEmail,
+        from:
+          process.env.CONTACT_FROM ||
+          "Janine Bubner Website <hello@janinebubner.com>",
         to: [toEmail],
         reply_to: email,
-        subject: `New Website Inquiry: ${requestType || "General Request"}`,
+        subject: `New Janine Bubner Management Request: ${eventType}`,
         html: `
-          <h2>New inquiry from janinebubner.com</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Company:</strong> ${company}</p>
-          <p><strong>Request Type:</strong> ${requestType}</p>
-          <p><strong>Event Date:</strong> ${eventDate}</p>
-          <p><strong>Event Location:</strong> ${eventLocation}</p>
-          <hr />
-          <p>${message}</p>
+          <h2>New Management Request</h2>
+          <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+          <p><strong>Company:</strong> ${escapeHtml(company || "-")}</p>
+          <p><strong>Event Type:</strong> ${escapeHtml(eventType)}</p>
+          <p><strong>Event Date:</strong> ${escapeHtml(eventDate || "-")}</p>
+          <p><strong>Location:</strong> ${escapeHtml(location || "-")}</p>
+          <p><strong>Budget:</strong> ${escapeHtml(budget || "-")}</p>
+          <p><strong>Website:</strong> ${escapeHtml(website || "-")}</p>
+          <hr>
+          <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
         `
       })
     });
 
+    const result = await response.text();
+
     if (!response.ok) {
-      const errorText = await response.text();
-      return res.status(500).send(errorText);
+      return res.status(500).send(result);
     }
 
     return res.redirect(303, "/?sent=true#contact");
   } catch (error) {
-    return res.status(500).send(error.message || "Server error");
+    return res.status(500).send(
+      error?.message || "Server error"
+    );
   }
+};
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
