@@ -2,6 +2,7 @@
   "name": "janinebubner-personal-site",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Personal speaker and author website for Janine Bubner",
   "scripts": {
     "dev": "vercel dev",
