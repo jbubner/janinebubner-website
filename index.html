@@ -261,18 +261,101 @@ footer{padding:28px 6vw;background:var(--midnight);color:rgba(248,244,236,.48);d
 </section>
 
 <section id="contact" class="contact">
-  <div><div class="kicker">Bookings & Inquiries</div><h2>Let’s create impact together.</h2><p>For keynote invitations, moderation requests, sponsorships, collaborations, media interviews and book inquiries for 2026/2027.</p></div>
+  <div>
+    <div class="kicker">Bookings &amp; Inquiries</div>
+    <h2>Let’s create impact together.</h2>
+    <p>For keynote invitations, moderation requests, sponsorships, collaborations, media interviews and book inquiries for 2026/2027.</p>
+  </div>
+
   <form action="/api/contact" method="POST">
-    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
-    <input name="name" placeholder="Full Name" required><input name="email" placeholder="Email Address" type="email" required>
-    <input name="company" placeholder="Company / Organization"><select name="requestType" required><option value="">Request Type</option><option>Keynote Request</option><option>Panel Invitation</option><option>Moderator Request</option><option>Sponsorship</option><option>Media Interview</option><option>Book Inquiry</option></select>
-    <input name="eventDate" placeholder="Event Date"><input name="eventLocation" placeholder="Event Location">
-    <textarea name="message" placeholder="Message" required></textarea>
-    <div class="full"><button class="btn primary" type="submit">Send Inquiry →</button></div>
-    <p id="status" style="color:var(--gold2);"></p>
+    <input
+      type="text"
+      name="botField"
+      style="display:none"
+      tabindex="-1"
+      autocomplete="off"
+      aria-hidden="true"
+    >
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Full Name"
+      required
+    >
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Email Address"
+      required
+    >
+
+    <input
+      type="text"
+      name="company"
+      placeholder="Company / Organization"
+    >
+
+    <select name="eventType" required>
+      <option value="">Request Type</option>
+      <option value="Keynote Request">Keynote Request</option>
+      <option value="Panel Invitation">Panel Invitation</option>
+      <option value="Moderator Request">Moderator Request</option>
+      <option value="Sponsorship">Sponsorship</option>
+      <option value="Media Interview">Media Interview</option>
+      <option value="Book Inquiry">Book Inquiry</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <input
+      type="text"
+      name="eventDate"
+      placeholder="Event Date"
+    >
+
+    <input
+      type="text"
+      name="location"
+      placeholder="Event Location"
+    >
+
+    <input
+      type="text"
+      name="budget"
+      placeholder="Budget Range (optional)"
+    >
+
+    <input
+      type="url"
+      name="website"
+      placeholder="Website (optional)"
+    >
+
+    <textarea
+      name="message"
+      placeholder="Message"
+      required
+    ></textarea>
+
+    <div class="full">
+      <button class="btn primary" type="submit">Send Inquiry →</button>
+    </div>
+
+    <p id="status" class="full" style="color:var(--gold2);"></p>
   </form>
 </section>
 
 <footer><div>© 2026 Janine Bubner. All rights reserved.</div><div>janinebubner.com</div><div><a href="imprint.html">Imprint</a> &nbsp;&nbsp; <a href="privacy.html">Privacy</a></div></footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const status = document.getElementById("status");
+
+  if (status && params.get("sent") === "true") {
+    status.textContent = "Thank you — your inquiry has been sent successfully.";
+  }
+</script>
+
 </body>
 </html>
