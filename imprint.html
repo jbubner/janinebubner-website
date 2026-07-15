@@ -1,146 +1,105 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Imprint | Janine Bubner</title>
-<style>
-:root {
-  --midnight:#020813;
-  --navy:#071321;
-  --navy2:#0B1728;
-  --petrol:#102A30;
-  --gold:#C9A86A;
-  --gold2:#E2BD7A;
-  --ivory:#F8F4EC;
-  --stone:#B8AEA0;
-  --line:rgba(248,244,236,.14);
-}
-* { box-sizing:border-box; margin:0; padding:0; }
-body {
-  min-height:100vh;
-  color:var(--ivory);
-  font-family:Inter, Arial, sans-serif;
-  background:
-    radial-gradient(circle at 72% 18%,rgba(226,189,122,.075),transparent 24%),
-    radial-gradient(circle at 68% 52%,rgba(16,42,48,.22),transparent 42%),
-    linear-gradient(135deg,#020813 0%,#061222 34%,#071321 58%,#0B1728 78%,#102A30 100%);
-  line-height:1.65;
-}
-a { color:var(--gold2); text-decoration:none; }
-.nav {
-  min-height:84px;
-  padding:0 6vw;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid var(--line);
-  background:rgba(2,8,19,.94);
-}
-.brand {
-  font-family:Georgia, 'Times New Roman', serif;
-  font-size:28px;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-}
-.back {
-  text-transform:uppercase;
-  letter-spacing:1.4px;
-  font-size:12px;
-  font-weight:800;
-}
-.wrap {
-  max-width:1040px;
-  margin:0 auto;
-  padding:80px 24px;
-}
-.card {
-  border:1px solid rgba(226,189,122,.26);
-  background:linear-gradient(135deg,rgba(7,19,33,.78),rgba(16,42,48,.42));
-  padding:clamp(28px,5vw,58px);
-  box-shadow:30px 40px 90px rgba(0,0,0,.22);
-}
-.kicker {
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:2.4px;
-  font-size:12px;
-  font-weight:900;
-  margin-bottom:18px;
-}
-h1 {
-  font-family:Georgia, 'Times New Roman', serif;
-  font-size:clamp(44px,6vw,76px);
-  font-weight:400;
-  line-height:1;
-  letter-spacing:-.04em;
-  margin-bottom:30px;
-}
-h2 {
-  color:var(--gold2);
-  text-transform:uppercase;
-  letter-spacing:1.8px;
-  font-size:13px;
-  margin:28px 0 10px;
-}
-p, li {
-  color:rgba(248,244,236,.76);
-  font-size:15px;
-  margin-bottom:10px;
-}
-ul { padding-left:20px; }
-.note {
-  border-left:2px solid var(--gold);
-  padding-left:16px;
-  margin-top:24px;
-  color:rgba(248,244,236,.64);
-}
-footer {
-  padding:30px 6vw;
-  border-top:1px solid var(--line);
-  color:rgba(248,244,236,.46);
-  font-size:13px;
-}
-@media(max-width:800px) {
-  .nav { flex-direction:column; align-items:flex-start; padding:24px 6vw; gap:14px; }
-  .brand { font-size:24px; }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imprint | Janine Bubner</title>
+  <style>
+    :root {
+      --navy: #071426;
+      --navy-2: #0c2038;
+      --ice: #eaf4ff;
+      --white: #ffffff;
+      --muted: #b9c7d8;
+      --line: rgba(255,255,255,0.16);
+      --card: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--navy), var(--navy-2) 55%, #020813);
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+    header, footer {
+      padding: 28px 7vw;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    footer { border-top: 1px solid var(--line); border-bottom: 0; color: var(--muted); }
+    a { color: var(--ice); text-decoration: none; }
+    main { padding: 64px 7vw; max-width: 980px; }
+    h1, h2 { font-family: Georgia, "Times New Roman", serif; line-height: 1.1; }
+    h1 { font-size: clamp(42px, 6vw, 72px); margin: 0 0 24px; }
+    h2 { font-size: 28px; margin-top: 38px; color: var(--ice); }
+    p { color: var(--muted); }
+    .box {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 24px;
+      padding: 28px;
+      margin-top: 28px;
+    }
+  </style>
 </head>
 <body>
-<nav class="nav">
-  <a href="index.html" class="brand">Janine Bubner</a>
-  <a href="index.html" class="back">Back to homepage →</a>
-</nav>
-<main class="wrap">
-  <section class="card">
-    
-<div class="kicker">Legal Notice</div>
-<h1>Imprint</h1>
+  <header>
+    <a href="index.html">Janine Bubner</a>
+    <nav>
+      <a href="index.html">Home</a> ·
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </header>
 
-<h2>Information according to applicable legal requirements</h2>
-<p><strong>Janine Bubner</strong><br>1110 N Virgil Ave PMB 94629<br>Los Angeles, CA 90029<br>USA</p>
+  <main>
+    <h1>Imprint</h1>
 
-<h2>Contact</h2>
-<p>Business inquiries are handled through the contact form on this website.</p>
+    <div class="box">
+      <h2>Website Owner</h2>
+      <p>
+        Janine Bubner<br>
+        1110 N Virgil Ave PMB 94629<br>
+        Los Angeles, CA 90029<br>
+        United States
+      </p>
 
-<h2>Responsible for content</h2>
-<p>Janine Bubner<br>1110 N Virgil Ave PMB 94629<br>Los Angeles, CA 90029<br>USA</p>
+      <h2>Contact</h2>
+      <p>
+        For speaking engagements, moderation requests, media inquiries
+        and professional collaborations, please use the contact form
+        on the homepage.
+      </p>
 
-<h2>Website Purpose</h2>
-<p>This website presents Janine Bubner’s work as a speaker, moderator, panelist, author and former professional cyclist.</p>
+      <h2>Responsible for Content</h2>
+      <p>
+        Janine Bubner
+      </p>
 
-<h2>Liability for Content</h2>
-<p>The contents of this website have been prepared with care. No guarantee is given for the accuracy, completeness or timeliness of the content.</p>
+      <h2>Disclaimer</h2>
+      <p>
+        The content of this website is provided for general informational purposes. While care is taken to keep information accurate and up to date, no liability is accepted for the completeness, accuracy or availability of the content.
+      </p>
 
-<h2>Liability for Links</h2>
-<p>This website may contain links to external websites. Responsibility for external content lies with the respective operators.</p>
+      <h2>External Links</h2>
+      <p>
+        This website may contain links to external websites. The website owner has no influence over the content of external websites and is not responsible for their content.
+      </p>
 
-<p class="note">Note: This is a practical English imprint draft. Before final publication, legal review is recommended, especially if the website is used commercially in Germany or the EU.</p>
+      <h2>Copyright</h2>
+      <p>
+        All content, images, text and design elements on this website are protected by copyright unless otherwise stated. Any use, reproduction or distribution requires prior written permission.
+      </p>
+    </div>
+  </main>
 
-  </section>
-</main>
-<footer>© 2026 Janine Bubner. All rights reserved.</footer>
+  <footer>
+    <div>© 2026 Janine Bubner. All rights reserved.</div>
+    <div><a href="index.html">Home</a> · <a href="privacy.html">Privacy Policy</a></div>
+  </footer>
 </body>
 </html>
