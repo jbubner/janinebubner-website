@@ -1,157 +1,127 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy | Janine Bubner</title>
 <style>
-:root {
-  --midnight:#020813;
-  --navy:#071321;
-  --navy2:#0B1728;
-  --petrol:#102A30;
-  --gold:#C9A86A;
-  --gold2:#E2BD7A;
-  --ivory:#F8F4EC;
-  --stone:#B8AEA0;
-  --line:rgba(248,244,236,.14);
+:root{
+ --bg1:#020813;--bg2:#071321;--bg3:#102A30;
+ --gold:#E2BD7A;--text:#F8F4EC;--muted:#B8AEA0;
+ --line:rgba(248,244,236,.14);
 }
-* { box-sizing:border-box; margin:0; padding:0; }
-body {
-  min-height:100vh;
-  color:var(--ivory);
-  font-family:Inter, Arial, sans-serif;
-  background:
-    radial-gradient(circle at 72% 18%,rgba(226,189,122,.075),transparent 24%),
-    radial-gradient(circle at 68% 52%,rgba(16,42,48,.22),transparent 42%),
-    linear-gradient(135deg,#020813 0%,#061222 34%,#071321 58%,#0B1728 78%,#102A30 100%);
-  line-height:1.65;
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+ font-family:Arial,sans-serif;color:var(--text);line-height:1.7;
+ background:
+ radial-gradient(circle at 72% 18%,rgba(226,189,122,.08),transparent 24%),
+ linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
 }
-a { color:var(--gold2); text-decoration:none; }
-.nav {
-  min-height:84px;
-  padding:0 6vw;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid var(--line);
-  background:rgba(2,8,19,.94);
+header{
+ padding:38px 6vw;
+ border-bottom:1px solid var(--line);
 }
-.brand {
-  font-family:Georgia, 'Times New Roman', serif;
-  font-size:28px;
-  letter-spacing:.2em;
-  text-transform:uppercase;
+.brand{
+ display:block;
+ font:42px Georgia,serif;
+ color:var(--gold);
+ letter-spacing:.22em;
+ text-transform:uppercase;
+ text-decoration:none;
+ margin-bottom:16px;
 }
-.back {
-  text-transform:uppercase;
-  letter-spacing:1.4px;
-  font-size:12px;
-  font-weight:800;
+.back{
+ color:var(--gold);
+ text-decoration:none;
+ text-transform:uppercase;
+ letter-spacing:2px;
+ font-size:12px;
+ font-weight:bold;
 }
-.wrap {
-  max-width:1040px;
-  margin:0 auto;
-  padding:80px 24px;
+main{max-width:1100px;margin:auto;padding:72px 4vw}
+.card{
+ padding:56px;
+ border:1px solid rgba(226,189,122,.35);
+ background:rgba(7,19,33,.68);
 }
-.card {
-  border:1px solid rgba(226,189,122,.26);
-  background:linear-gradient(135deg,rgba(7,19,33,.78),rgba(16,42,48,.42));
-  padding:clamp(28px,5vw,58px);
-  box-shadow:30px 40px 90px rgba(0,0,0,.22);
+.kicker{
+ color:var(--gold);
+ text-transform:uppercase;
+ letter-spacing:3px;
+ font-size:12px;
+ font-weight:bold;
 }
-.kicker {
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:2.4px;
-  font-size:12px;
-  font-weight:900;
-  margin-bottom:18px;
+h1{
+ font:72px Georgia,serif;
+ margin:18px 0 40px;
 }
-h1 {
-  font-family:Georgia, 'Times New Roman', serif;
-  font-size:clamp(44px,6vw,76px);
-  font-weight:400;
-  line-height:1;
-  letter-spacing:-.04em;
-  margin-bottom:30px;
+.section{
+ color:var(--gold);
+ text-transform:uppercase;
+ letter-spacing:2px;
+ font-weight:bold;
+ margin:34px 0 12px;
 }
-h2 {
-  color:var(--gold2);
-  text-transform:uppercase;
-  letter-spacing:1.8px;
-  font-size:13px;
-  margin:28px 0 10px;
+p{
+ color:var(--muted);
+ font-size:18px;
+ max-width:860px;
 }
-p, li {
-  color:rgba(248,244,236,.76);
-  font-size:15px;
-  margin-bottom:10px;
+footer{
+ border-top:1px solid var(--line);
+ padding:26px 6vw;
+ display:flex;
+ justify-content:space-between;
+ flex-wrap:wrap;
+ color:#9ea7b3;
 }
-ul { padding-left:20px; }
-.note {
-  border-left:2px solid var(--gold);
-  padding-left:16px;
-  margin-top:24px;
-  color:rgba(248,244,236,.64);
-}
-footer {
-  padding:30px 6vw;
-  border-top:1px solid var(--line);
-  color:rgba(248,244,236,.46);
-  font-size:13px;
-}
-@media(max-width:800px) {
-  .nav { flex-direction:column; align-items:flex-start; padding:24px 6vw; gap:14px; }
-  .brand { font-size:24px; }
-}
+footer a{color:inherit}
 </style>
 </head>
 <body>
-<nav class="nav">
-  <a href="index.html" class="brand">Janine Bubner</a>
-  <a href="index.html" class="back">Back to homepage →</a>
-</nav>
-<main class="wrap">
-  <section class="card">
-    
+
+<header>
+<a class="brand" href="index.html">Janine Bubner</a>
+<a class="back" href="index.html">Back to homepage →</a>
+</header>
+
+<main>
+<div class="card">
+
 <div class="kicker">Data Protection</div>
 <h1>Privacy Policy</h1>
 
-<h2>Purpose of this Website</h2>
-<p>This website is used to present Janine Bubner’s professional profile and to receive inquiries for speaking, moderation, panels, media, book-related requests and collaborations.</p>
+<div class="section">Purpose of this Website</div>
+<p>This website presents Janine Bubner's professional profile and enables visitors to submit professional inquiries for speaking engagements, moderation, media interviews, partnerships and collaborations.</p>
 
-<h2>Inquiry Form</h2>
-<p>If you submit an inquiry through the website form, the information you provide may be processed to respond to your request.</p>
+<div class="section">Inquiry Form</div>
+<p>When you submit the contact form, the information you provide is used solely to process and respond to your request.</p>
 
-<h2>Types of Data</h2>
-<ul>
-  <li>Name and organization</li>
-  <li>Request type and event details</li>
-  <li>Message content submitted by you</li>
-</ul>
+<div class="section">Types of Data Collected</div>
+<p>Name, email address, company, event information, optional website and the message you submit.</p>
 
-<h2>Purpose of Processing</h2>
-<ul>
-  <li>Responding to keynote, moderation, panel and media inquiries</li>
-  <li>Processing partnership, sponsorship and book-related requests</li>
-  <li>Maintaining professional communication with potential partners</li>
-</ul>
+<div class="section">How Your Data Is Used</div>
+<p>Your information is used exclusively to process inquiries, respond to requests and maintain professional communication.</p>
 
-<h2>No Public Email or Phone Number</h2>
-<p>Direct personal email addresses and phone numbers are intentionally not displayed publicly. Communication is initiated through the website form.</p>
+<div class="section">Google Analytics</div>
+<p>This website uses Google Analytics to better understand how visitors use the website and to improve its content and performance. Google Analytics may collect information such as pages visited, browser type, device information and anonymized usage data. Where required by law, analytics are only activated after the visitor has provided consent through the cookie banner.</p>
 
-<h2>Cookies and Analytics</h2>
-<p>This version does not include analytics or tracking scripts by default. If analytics, newsletter tools, external form processors or cookies are added later, this policy should be updated accordingly.</p>
+<div class="section">Cookies</div>
+<p>This website may use essential cookies and analytics cookies. You can manage your cookie preferences through the cookie banner where applicable.</p>
 
-<h2>Retention</h2>
-<p>Inquiry data should only be retained for as long as necessary to process the request or maintain relevant business communication.</p>
+<div class="section">Your Rights</div>
+<p>You may request access to, correction or deletion of your personal data at any time by contacting us through the website.</p>
 
-<p class="note">This privacy policy is a practical draft and should be legally reviewed before publication, especially if additional tools such as analytics, newsletters or form providers are added.</p>
+<div class="section">External Links</div>
+<p>Links to external websites are provided for convenience. Their operators are responsible for their own privacy practices and content.</p>
 
-  </section>
+</div>
 </main>
-<footer>© 2026 Janine Bubner. All rights reserved.</footer>
+
+<footer>
+<div>© 2026 Janine Bubner. All rights reserved.</div>
+<div><a href="imprint.html">Imprint</a> · <a href="index.html">Home</a></div>
+</footer>
+
 </body>
 </html>
