@@ -1,128 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Speaking | Janine Bubner</title>
-  <meta name="description" content="Book Janine Bubner for keynotes, panel discussions and moderation on AI, software-defined vehicles, leadership and high performance." />
-  <style>
-    :root{--midnight:#020813;--navy:#071321;--navy2:#0B1728;--petrol:#102A30;--gold:#C9A86A;--gold2:#E2BD7A;--ivory:#F8F4EC;--stone:#B8AEA0;--line:rgba(248,244,236,.14)}
-    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
-    body{min-height:100vh;font-family:Inter,Arial,sans-serif;color:var(--ivory);background:radial-gradient(circle at 72% 18%,rgba(226,189,122,.075),transparent 24%),radial-gradient(circle at 68% 52%,rgba(16,42,48,.22),transparent 42%),linear-gradient(135deg,#020813 0%,#061222 34%,#071321 58%,#0B1728 78%,#102A30 100%);line-height:1.6}
-    a{color:inherit;text-decoration:none} h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;line-height:1.02}
-    .site-header{border-bottom:1px solid var(--line);background:rgba(2,8,19,.94);padding:32px 6vw 28px;position:sticky;top:0;z-index:20;backdrop-filter:blur(16px)}
-    .brand{display:block;font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,4vw,46px);letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:14px}
-    .nav-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.back-link,.nav-link{color:var(--gold2);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:900}.nav-links{display:flex;gap:20px;flex-wrap:wrap}
-    .hero{min-height:72vh;display:grid;grid-template-columns:1.08fr .92fr;border-bottom:1px solid var(--line);overflow:hidden}.hero-copy{padding:96px 6vw 88px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(90deg,rgba(2,8,19,.98),rgba(7,19,33,.82),rgba(16,42,48,.35))}
-    .kicker{color:var(--gold2);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:900;margin-bottom:22px}.hero h1{font-size:clamp(58px,7vw,100px);max-width:770px;margin-bottom:28px}.hero p{max-width:650px;color:var(--stone);font-size:clamp(18px,2vw,22px);margin-bottom:34px}
-    .hero-stage{position:relative;min-height:560px;background:radial-gradient(circle at 50% 36%,rgba(226,189,122,.18),transparent 24%),linear-gradient(145deg,#0A1624 0%,#102A30 55%,#061222 100%);overflow:hidden}.hero-stage:before{content:"";position:absolute;width:58%;height:58%;left:20%;top:14%;border:1px solid rgba(226,189,122,.30);border-radius:50%}.hero-stage:after{content:"";position:absolute;left:12%;right:12%;bottom:16%;height:1px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);box-shadow:0 0 80px rgba(226,189,122,.32)}.stage-message{position:absolute;left:10%;right:10%;bottom:11%;font-family:Georgia,"Times New Roman",serif;font-size:clamp(40px,5.5vw,78px);max-width:580px}
-    .actions{display:flex;gap:16px;flex-wrap:wrap}.btn{min-height:54px;display:inline-flex;align-items:center;justify-content:center;padding:0 28px;border:1px solid rgba(248,244,236,.26);text-transform:uppercase;letter-spacing:1.5px;font-size:12px;font-weight:900;transition:.25s ease}.btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--midnight);border-color:var(--gold)}.btn:hover{transform:translateY(-3px);border-color:var(--gold2)}
-    section{border-bottom:1px solid var(--line)}.intro{padding:84px 6vw;display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;background:rgba(7,19,33,.42)}.intro h2{font-size:clamp(42px,5vw,72px)}.intro-copy p{color:var(--stone);font-size:18px;margin-bottom:20px;max-width:760px}
-    .formats{padding:84px 5vw}.section-title{text-align:center;font-size:clamp(42px,5vw,72px);margin-bottom:18px}.section-subtitle{text-align:center;color:var(--stone);max-width:780px;margin:0 auto 44px;font-size:17px}.format-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}.format-card{min-height:260px;padding:38px;text-align:center;background:linear-gradient(145deg,rgba(7,19,33,.78),rgba(16,42,48,.48));border-right:1px solid var(--line)}.format-card:last-child{border-right:none}.format-card h3{font-family:Inter,Arial,sans-serif;color:var(--gold2);text-transform:uppercase;letter-spacing:2px;font-size:14px;margin-bottom:18px}.format-card p{color:var(--stone);font-size:16px}
-    .topics{padding:86px 6vw;background:radial-gradient(circle at 20% 36%,rgba(201,168,106,.10),transparent 22%),linear-gradient(135deg,#071321,#081525,#020813)}.topic-list{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:44px}.topic{border:1px solid var(--line);padding:34px;min-height:220px;background:rgba(248,244,236,.025)}.topic small{color:var(--gold2);text-transform:uppercase;letter-spacing:2px;font-weight:900;font-size:11px}.topic h3{margin:18px 0 14px;font-size:clamp(30px,3vw,46px)}.topic p{color:var(--stone);max-width:620px}
-    .events{padding:86px 6vw;background:rgba(7,19,33,.42)}.event-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:42px}.event{border:1px solid var(--line);padding:38px;background:linear-gradient(145deg,rgba(7,19,33,.80),rgba(16,42,48,.55))}.event .role{color:var(--gold2);text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:900;margin-bottom:16px}.event h3{font-size:clamp(32px,3.5vw,50px);margin-bottom:16px}.event p{color:var(--stone);margin-bottom:20px}
-    .media{padding:86px 6vw;display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}.media-copy h2{font-size:clamp(42px,5vw,72px);margin-bottom:22px}.media-copy p{color:var(--stone);font-size:18px;margin-bottom:26px;max-width:680px}.media-panel{min-height:360px;border:1px solid rgba(226,189,122,.34);background:radial-gradient(circle at 50% 30%,rgba(226,189,122,.16),transparent 24%),linear-gradient(145deg,#0A1624,#102A30,#061222);display:flex;align-items:center;justify-content:center;text-align:center;padding:34px}.media-panel h3{font-size:clamp(36px,4vw,60px);max-width:560px}
-    .cta{text-align:center;padding:92px 6vw;background:radial-gradient(circle at 50% 0%,rgba(226,189,122,.12),transparent 36%),linear-gradient(135deg,var(--midnight),var(--navy2))}.cta h2{font-size:clamp(44px,5.5vw,78px);max-width:900px;margin:0 auto 24px}.cta p{color:var(--stone);max-width:700px;margin:0 auto 32px;font-size:18px}
-    footer{padding:28px 6vw;background:var(--midnight);color:rgba(248,244,236,.48);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:13px}footer a{color:var(--stone)}
-    @media(max-width:900px){.hero,.intro,.media{grid-template-columns:1fr}.hero-copy{padding:70px 6vw 46px}.hero-stage{min-height:420px}.format-grid,.topic-list,.event-grid{grid-template-columns:1fr}.format-card{border-right:none;border-bottom:1px solid var(--line)}.format-card:last-child{border-bottom:none}}
-    @media(max-width:600px){.site-header{padding:26px 6vw}.brand{font-size:26px}.hero h1{font-size:54px}.stage-message{font-size:48px}.intro,.formats,.topics,.events,.media,.cta{padding-left:6vw;padding-right:6vw}.format-card,.topic,.event{padding:28px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Speaking | Janine Bubner</title>
+<meta name="description" content="Book Janine Bubner for keynotes, panel discussions and moderation on AI, software-defined vehicles, leadership and high performance.">
+<style>
+
+:root{
+  --midnight:#020813;--navy:#071321;--navy2:#0b1728;--petrol:#102a30;
+  --gold:#c9a86a;--gold2:#e2bd7a;--ivory:#f8f4ec;--stone:#b8aea0;
+  --line:rgba(248,244,236,.14);--panel:rgba(248,244,236,.04);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;font-family:Arial,sans-serif;color:var(--ivory);line-height:1.65;
+  background:
+    radial-gradient(circle at 75% 12%,rgba(226,189,122,.08),transparent 24%),
+    linear-gradient(135deg,var(--midnight),var(--navy) 50%,var(--petrol));
+}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;line-height:1.05}
+header{
+  position:sticky;top:0;z-index:20;padding:28px 6vw;border-bottom:1px solid var(--line);
+  background:rgba(2,8,19,.92);backdrop-filter:blur(14px)
+}
+.brand{display:block;color:var(--gold2);font-family:Georgia,serif;font-size:clamp(26px,4vw,44px);letter-spacing:.22em;text-transform:uppercase;margin-bottom:12px}
+.nav{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.nav a,.eyebrow{color:var(--gold2);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;
+  border:1px solid rgba(248,244,236,.28);font-size:12px;font-weight:900;letter-spacing:1.4px;
+  text-transform:uppercase;transition:.25s ease
+}
+.btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--midnight);border-color:var(--gold)}
+.btn:hover{transform:translateY(-3px);border-color:var(--gold2)}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+section{border-bottom:1px solid var(--line)}
+.section{padding:84px 6vw}
+.section-title{font-size:clamp(42px,5.5vw,76px);margin:14px 0 22px}
+.lead{max-width:790px;color:var(--stone);font-size:clamp(17px,2vw,21px)}
+.card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(7,19,33,.82),rgba(16,42,48,.52));padding:32px}
+footer{padding:28px 6vw;background:var(--midnight);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:rgba(248,244,236,.5);font-size:13px}
+footer a{color:var(--stone)}
+@media(max-width:760px){.section{padding:58px 6vw}.actions{flex-direction:column}.btn{width:100%}}
+
+.hero{min-height:78vh;display:grid;grid-template-columns:1.02fr .98fr}
+.hero-copy{padding:90px 6vw;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(90deg,rgba(2,8,19,.98),rgba(7,19,33,.82))}
+.hero-copy h1{font-size:clamp(58px,7vw,102px);margin:20px 0 26px}
+.hero-media{min-height:560px;background:url('stuttgart-hero.jpg') center/cover no-repeat;position:relative}
+.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,8,19,.25),transparent 45%)}
+.format-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px}
+.format-grid .card{min-height:235px;border-right:none}
+.format-grid .card:last-child{border-right:1px solid var(--line)}
+.feature{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;background:rgba(7,19,33,.45)}
+.feature img{width:100%;display:block;border:1px solid rgba(226,189,122,.35)}
+.feature h2{font-size:clamp(42px,5vw,72px);margin:15px 0 22px}
+.feature p{color:var(--stone);font-size:18px;margin-bottom:28px}
+.topics{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:38px}
+.topic h3{font-size:clamp(28px,3vw,42px);margin:12px 0}
+.topic p{color:var(--stone)}
+@media(max-width:900px){.hero,.feature{grid-template-columns:1fr}.hero-media{min-height:430px}.format-grid,.topics{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html">Janine Bubner</a>
-    <div class="nav-row">
-      <a class="back-link" href="index.html">Back to homepage →</a>
-      <nav class="nav-links" aria-label="Page navigation">
-        <a class="nav-link" href="design.html">Design</a>
-        <a class="nav-link" href="creative.html">Creative</a>
-        <a class="nav-link" href="index.html#contact">Contact</a>
-      </nav>
+<header>
+  <a class="brand" href="index.html">Janine Bubner</a>
+  <div class="nav">
+    <a href="index.html">Back to homepage →</a>
+    <div><a href="design.html">Design</a> &nbsp;&nbsp; <a href="creative.html">Creative</a> &nbsp;&nbsp; <a href="index.html#contact">Contact</a></div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">Keynotes · Panels · Moderation</div>
+    <h1>Ideas that move people.</h1>
+    <p class="lead">Technology leadership, international transformation and lessons from elite sport — translated into clear, relevant and memorable stage moments.</p>
+    <div class="actions" style="margin-top:32px">
+      <a class="btn primary" href="index.html#contact">Book Janine</a>
+      <a class="btn" href="#featured">Featured keynote</a>
     </div>
-  </header>
+  </div>
+  <div class="hero-media" role="img" aria-label="Janine Bubner presenting at the European AI and SDV Summit in Stuttgart"></div>
+</section>
 
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="kicker">Keynotes · Panels · Moderation</div>
-        <h1>Ideas that move people.</h1>
-        <p>Janine brings together technology leadership, international transformation and lessons from elite sport to create clear, relevant and memorable stage moments.</p>
-        <div class="actions">
-          <a class="btn primary" href="index.html#contact">Book Janine</a>
-          <a class="btn" href="#topics">View Topics</a>
-        </div>
-      </div>
-      <div class="hero-stage" aria-hidden="true">
-        <div class="stage-message">Clarity. Energy. Perspective.</div>
-      </div>
-    </section>
+<section class="section">
+  <div class="eyebrow">Formats</div>
+  <h2 class="section-title">Built for the room.</h2>
+  <p class="lead">From focused executive keynotes to dynamic industry conversations.</p>
+  <div class="format-grid">
+    <article class="card"><div class="eyebrow">Keynotes</div><h3 style="font-size:34px;margin:15px 0">Strategic narratives</h3><p class="lead" style="font-size:16px">AI, software-defined vehicles, transformation, leadership and high performance.</p></article>
+    <article class="card"><div class="eyebrow">Panels</div><h3 style="font-size:34px;margin:15px 0">Clear viewpoints</h3><p class="lead" style="font-size:16px">Constructive challenge and practical insight for executive and industry discussions.</p></article>
+    <article class="card"><div class="eyebrow">Moderation</div><h3 style="font-size:34px;margin:15px 0">Audience energy</h3><p class="lead" style="font-size:16px">Structured, engaging moderation for conferences, leadership forums and international events.</p></article>
+  </div>
+</section>
 
-    <section class="intro">
-      <div>
-        <div class="kicker">On Stage</div>
-        <h2>Executive insight with a performance mindset.</h2>
-      </div>
-      <div class="intro-copy">
-        <p>Janine Bubner combines more than a decade of experience in the automotive and technology industry with a background in international elite cycling.</p>
-        <p>Her speaking style is direct, strategic and human. She translates complex topics into stories audiences can understand, remember and act on.</p>
-      </div>
-    </section>
+<section class="section feature" id="featured">
+  <img src="stuttgart-quote.jpg" alt="Janine Bubner at the European AI and SDV Summit with the quote invisible complexity only matters if it creates visible simplicity">
+  <div>
+    <div class="eyebrow">Featured appearance · Stuttgart 2026</div>
+    <h2>AI-Driven Software-Defined Vehicles</h2>
+    <p>From platform strategy to real customer value: a keynote on why SDV is the foundation rather than the product, how AI turns context into action, and why integration and user adoption determine whether technology creates value.</p>
+    <div class="actions">
+      <a class="btn primary" href="summit.html">View summit story</a>
+      <a class="btn" href="janine-bubner-ai-sdv-summit-2026.pdf" download>Download keynote PDF</a>
+    </div>
+  </div>
+</section>
 
-    <section class="formats">
-      <div class="kicker" style="text-align:center;">Formats</div>
-      <h2 class="section-title">Built for the room.</h2>
-      <p class="section-subtitle">From focused executive keynotes to dynamic industry conversations.</p>
-      <div class="format-grid">
-        <article class="format-card"><h3>Keynotes</h3><p>Strong strategic narratives on AI, software-defined vehicles, transformation, leadership and high performance.</p></article>
-        <article class="format-card"><h3>Panels</h3><p>Clear viewpoints, constructive challenge and practical insight for executive and industry discussions.</p></article>
-        <article class="format-card"><h3>Moderation</h3><p>Structured, energetic and audience-focused moderation for conferences, leadership forums and international events.</p></article>
-      </div>
-    </section>
+<section class="section">
+  <div class="eyebrow">Speaking Topics</div>
+  <h2 class="section-title">Technology, leadership and performance.</h2>
+  <div class="topics">
+    <article class="card topic"><div class="eyebrow">AI & Adoption</div><h3>Building AI is only the beginning.</h3><p>Why integration, customer behavior and trust determine whether AI creates real value.</p></article>
+    <article class="card topic"><div class="eyebrow">Software-Defined Vehicles</div><h3>SDV is the foundation, not the product.</h3><p>How scalable software becomes meaningful through a seamless, continuously improving customer experience.</p></article>
+    <article class="card topic"><div class="eyebrow">Leadership</div><h3>Leading through complexity.</h3><p>Creating alignment, momentum and confidence when systems, teams and priorities keep changing.</p></article>
+    <article class="card topic"><div class="eyebrow">Elite Performance</div><h3>Beyond performance.</h3><p>Lessons from elite sport on resilience, pressure, reinvention and sustainable ambition.</p></article>
+  </div>
+</section>
 
-    <section class="topics" id="topics">
-      <div class="kicker">Speaking Topics</div>
-      <h2 class="section-title" style="text-align:left;margin-bottom:0;">Technology, leadership and performance.</h2>
-      <div class="topic-list">
-        <article class="topic"><small>AI &amp; Adoption</small><h3>Building AI is only the beginning.</h3><p>Why integration, customer behavior and trust determine whether AI creates real value.</p></article>
-        <article class="topic"><small>Software-Defined Vehicles</small><h3>SDV is the foundation, not the product.</h3><p>How vehicle software becomes meaningful when it enables a seamless, continuously improving customer experience.</p></article>
-        <article class="topic"><small>Leadership</small><h3>Leading through complexity.</h3><p>How leaders create alignment, momentum and confidence when systems, teams and priorities are constantly changing.</p></article>
-        <article class="topic"><small>Elite Performance</small><h3>Beyond performance.</h3><p>Lessons from elite sport on resilience, identity, pressure, reinvention and sustainable ambition.</p></article>
-      </div>
-    </section>
+<section class="section" style="text-align:center">
+  <div class="eyebrow">Bookings 2026 / 2027</div>
+  <h2 class="section-title">Bring a clear and memorable perspective to your stage.</h2>
+  <p class="lead" style="margin:0 auto 30px">For keynote invitations, panel discussions, moderation and selected media requests, contact Janine’s management.</p>
+  <a class="btn primary" href="index.html#contact">Send event request</a>
+</section>
+</main>
 
-    <section class="events">
-      <div class="kicker">Selected Stages</div>
-      <h2 class="section-title" style="text-align:left;margin-bottom:0;">Featured appearances.</h2>
-      <div class="event-grid">
-        <article class="event"><div class="role">Keynote Speaker &amp; Panelist</div><h3>European AI &amp; Software-Defined Vehicle Summit</h3><p>Stuttgart, Germany · 2026</p><a class="back-link" href="summit.html">Explore Summit Highlights →</a></article>
-        <article class="event"><div class="role">Moderator</div><h3>CarApp World Europe</h3><p>Paris, France · 2026</p><a class="back-link" href="index.html#contact">Event Inquiry →</a></article>
-      </div>
-    </section>
-
-    <section class="media">
-      <div class="media-copy">
-        <div class="kicker">Keynote Material</div>
-        <h2>Presentation and media assets.</h2>
-        <p>The Stuttgart keynote presentation and selected event photography will be added here as downloadable and viewable media.</p>
-        <div class="actions">
-          <a class="btn primary" href="#" aria-disabled="true">Presentation Coming Soon</a>
-          <a class="btn" href="summit.html">View Event Impressions</a>
-        </div>
-      </div>
-      <div class="media-panel"><h3>European AI &amp; SDV Summit — Keynote &amp; Panel</h3></div>
-    </section>
-
-    <section class="cta">
-      <div class="kicker">Bookings 2026 / 2027</div>
-      <h2>Bring a clear and memorable perspective to your stage.</h2>
-      <p>For keynote invitations, panel discussions, moderation and selected media requests, please contact Janine’s management.</p>
-      <a class="btn primary" href="index.html#contact">Send Event Request</a>
-    </section>
-  </main>
-
-  <footer>
-    <div>© 2026 Janine Bubner. All rights reserved.</div>
-    <div><a href="index.html">Home</a> · <a href="imprint.html">Imprint</a> · <a href="privacy.html">Privacy Policy</a></div>
-  </footer>
+<footer><div>© 2026 Janine Bubner. All rights reserved.</div><div><a href="index.html">Home</a> · <a href="imprint.html">Imprint</a> · <a href="privacy.html">Privacy Policy</a></div></footer>
 </body>
 </html>
