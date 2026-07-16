@@ -1,28 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-
-  <meta charset="UTF-8" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  ...
-
-  <!-- Google tag (gtag.js) -->
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NX0DCXJR24"></script>
-
-  <script>
-
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag(){dataLayer.push(arguments);}
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-NX0DCXJR24');
-
-  </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Janine Bubner | Beyond Performance</title>
@@ -163,6 +141,19 @@ footer{padding:28px 6vw;background:var(--midnight);color:rgba(248,244,236,.48);d
 .legal ul{padding-left:18px}
 @media(max-width:980px){.real-grid,.legal-grid{grid-template-columns:1fr}}
 
+
+.real-card{
+  cursor:pointer;
+  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+.real-card:hover,
+.real-card:focus-visible{
+  transform:translateY(-5px);
+  border-color:rgba(226,189,122,.65);
+  box-shadow:0 24px 55px rgba(0,0,0,.24);
+  outline:none;
+}
+
 </style>
 </head>
 <body>
@@ -255,28 +246,28 @@ footer{padding:28px 6vw;background:var(--midnight);color:rgba(248,244,236,.48);d
         <span class="textlink">Read articles →</span>
       </div>
     </a>
-    <a class="real-card" id="design" href="#contact">
+    <a class="real-card" id="design" href="design.html" aria-label="Explore design and product strategy">
       <div class="real-content">
         <div class="label">Design</div>
         <h3>Strategy needs creativity.</h3>
         <p>Clean, clear, purpose-driven design and product thinking.</p>
-        <span class="textlink">View projects →</span>
+        <span class="textlink">Explore design →</span>
       </div>
     </a>
-    <a class="real-card" href="#contact">
+    <a class="real-card" href="speaking.html" aria-label="Explore speaking, keynotes, panels and moderation">
       <div class="real-content">
         <div class="label">Speaking</div>
         <h3>On stage. Inspiring change.</h3>
         <p>Keynotes, panels and moderation for events that move audiences.</p>
-        <span class="textlink">View topics →</span>
+        <span class="textlink">Explore speaking →</span>
       </div>
     </a>
-    <a class="real-card" href="#contact">
+    <a class="real-card" href="creative.html" aria-label="Explore creative projects and storytelling">
       <div class="real-content">
         <div class="label">Creative</div>
         <h3>Bringing ideas to life.</h3>
         <p>Visual storytelling that inspires and connects.</p>
-        <span class="textlink">Explore work →</span>
+        <span class="textlink">Explore creative →</span>
       </div>
     </a>
   </div>
