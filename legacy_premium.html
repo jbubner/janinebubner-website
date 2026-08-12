@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Legacy | Janine Bubner</title>
+<style>
+:root{
+--bg:#050b16;--panel:#0c1626;--gold:#d6b06b;--text:#f5f1e8;--muted:#b6b2a9;
+}
+*{box-sizing:border-box} body{margin:0;background:linear-gradient(135deg,#040913,#0c1626);color:var(--text);font-family:Arial,sans-serif}
+header{padding:28px 7%;border-bottom:1px solid rgba(255,255,255,.08)}
+header a{color:var(--gold);text-decoration:none;font-weight:bold;letter-spacing:2px}
+.hero{display:grid;grid-template-columns:1fr 1.1fr;min-height:80vh}
+.copy{padding:7%;display:flex;flex-direction:column;justify-content:center}
+.copy h1{font:400 82px Georgia,serif;line-height:.95;margin:.2em 0}
+.copy p{font-size:20px;color:var(--muted);max-width:620px;line-height:1.8}
+.collage{padding:40px;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:260px 260px;gap:18px}
+.card{border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:var(--panel)}
+.card img{width:100%;height:100%;object-fit:cover}
+.big{grid-row:1 / span 2}
+section{padding:90px 7%;border-top:1px solid rgba(255,255,255,.06)}
+h2{font:400 54px Georgia,serif;margin:0 0 16px}
+.lead{color:var(--muted);max-width:760px;font-size:20px;line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.box{padding:30px;border:1px solid rgba(255,255,255,.08);border-radius:16px;background:rgba(255,255,255,.03)}
+.year{color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.box h3{font:400 34px Georgia,serif;margin:12px 0}
+.box p{color:var(--muted);line-height:1.7}
+@media(max-width:900px){
+.hero,.grid{grid-template-columns:1fr}
+.collage{grid-template-columns:1fr;grid-template-rows:auto}
+.big{grid-row:auto}
+.copy h1{font-size:56px}
+}
+</style>
+</head>
+<body>
+<header><a href="index.html">← Back to homepage</a></header>
+
+<div class="hero">
+<div class="copy">
+<div style="color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:13px;">Elite Cycling Legacy</div>
+<h1>Built through sport.</h1>
+<p>Before international technology programs and conference stages came years of elite cycling. The pursuit of performance, discipline and resilience continues to shape how I lead, speak and build products today.</p>
+</div>
+
+<div class="collage">
+<div class="card big">
+<img src="images/fixedcrit-european-champion-2017.jpg" alt="European Champion">
+</div>
+
+<div class="card">
+<img src="images/fixedcrit-start-2017.jpg" alt="Start line">
+</div>
+
+<div class="card" style="display:flex;align-items:center;justify-content:center;padding:28px;text-align:left;">
+<div>
+<div class="year">2017</div>
+<h3>European Champion</h3>
+<p>Fixed Crit European Championship<br>Ostend, Belgium</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<section>
+<h2>Selected Palmares</h2>
+<p class="lead">Highlights from an international cycling career that later became the foundation for technology leadership and public speaking.</p>
+
+<div class="grid">
+<div class="box">
+<div class="year">2017</div>
+<h3>European Champion</h3>
+<p>Winner of the Fixed Crit European Championship in Ostend, Belgium.</p>
+</div>
+
+<div class="box">
+<div class="year">National Team</div>
+<h3>Track & Road</h3>
+<p>Competed at elite national level across track and road disciplines.</p>
+</div>
+
+<div class="box">
+<div class="year">London Cycle</div>
+<h3>Olympic Qualification Campaign</h3>
+<p>Part of the performance pathway leading towards the London Olympic cycle.</p>
+</div>
+</div>
+</section>
+
+</body>
+</html>

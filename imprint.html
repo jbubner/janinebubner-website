@@ -4,63 +4,118 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Imprint | Janine Bubner</title>
+  <meta name="description" content="Imprint and legal information for janinebubner.com">
   <style>
-    :root {
-      --navy: #071426;
-      --navy-2: #0c2038;
-      --ice: #eaf4ff;
-      --white: #ffffff;
-      --muted: #b9c7d8;
-      --line: rgba(255,255,255,0.16);
-      --card: rgba(255,255,255,0.08);
+    :root{
+      --midnight:#020813;
+      --navy:#071321;
+      --navy2:#0B1728;
+      --petrol:#102A30;
+      --gold:#C9A86A;
+      --gold2:#E2BD7A;
+      --ivory:#F8F4EC;
+      --stone:#B8AEA0;
+      --line:rgba(248,244,236,.14);
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: var(--white);
-      background: linear-gradient(135deg, var(--navy), var(--navy-2) 55%, #020813);
-      min-height: 100vh;
-      line-height: 1.7;
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      min-height:100vh;
+      font-family:Inter,Arial,sans-serif;
+      color:var(--ivory);
+      background:
+        radial-gradient(circle at 72% 18%,rgba(226,189,122,.075),transparent 24%),
+        radial-gradient(circle at 68% 52%,rgba(16,42,48,.22),transparent 42%),
+        linear-gradient(135deg,#020813 0%,#061222 34%,#071321 58%,#0B1728 78%,#102A30 100%);
+      line-height:1.65;
     }
-    header, footer {
-      padding: 28px 7vw;
-      border-bottom: 1px solid var(--line);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
+    a{color:inherit;text-decoration:none}
+    .site-header{
+      padding:38px 6vw 34px;
+      border-bottom:1px solid var(--line);
+      background:rgba(2,8,19,.88);
     }
-    footer { border-top: 1px solid var(--line); border-bottom: 0; color: var(--muted); }
-    a { color: var(--ice); text-decoration: none; }
-    main { padding: 64px 7vw; max-width: 980px; }
-    h1, h2 { font-family: Georgia, "Times New Roman", serif; line-height: 1.1; }
-    h1 { font-size: clamp(42px, 6vw, 72px); margin: 0 0 24px; }
-    h2 { font-size: 28px; margin-top: 38px; color: var(--ice); }
-    p { color: var(--muted); }
-    .box {
-      border: 1px solid var(--line);
-      background: var(--card);
-      border-radius: 24px;
-      padding: 28px;
-      margin-top: 28px;
+    .brand{
+      display:block;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(28px,4vw,46px);
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:var(--gold2);
+      margin-bottom:16px;
+    }
+    .back-link{
+      display:inline-flex;
+      gap:10px;
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-weight:800;
+      font-size:12px;
+    }
+    main{max-width:1120px;margin:0 auto;padding:72px 4vw 88px}
+    .legal-card{
+      border:1px solid rgba(226,189,122,.34);
+      background:linear-gradient(135deg,rgba(7,19,33,.92),rgba(16,42,48,.55));
+      padding:clamp(34px,5vw,68px);
+      box-shadow:0 28px 80px rgba(0,0,0,.18);
+    }
+    .kicker{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:3px;
+      font-size:12px;
+      font-weight:900;
+      margin-bottom:24px;
+    }
+    h1{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(52px,7vw,88px);
+      font-weight:400;
+      line-height:1.05;
+      margin-bottom:46px;
+    }
+    .gold-heading{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:2.4px;
+      font-size:14px;
+      font-weight:900;
+      margin:40px 0 14px;
+    }
+    .gold-heading:first-of-type{margin-top:0}
+    p{color:var(--stone);font-size:clamp(17px,2vw,20px);max-width:820px}
+    footer{
+      border-top:1px solid var(--line);
+      padding:26px 6vw;
+      background:rgba(2,8,19,.92);
+      color:rgba(248,244,236,.48);
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+      font-size:13px;
+    }
+    footer a{color:var(--stone)}
+    @media(max-width:700px){
+      .site-header{padding:28px 7vw 26px}
+      main{padding:46px 5vw 64px}
+      .legal-card{padding:30px 24px}
+      p{font-size:17px}
     }
   </style>
 </head>
 <body>
-  <header>
-    <a href="index.html">Janine Bubner</a>
-    <nav>
-      <a href="index.html">Home</a> ·
-      <a href="privacy.html">Privacy Policy</a>
-    </nav>
+  <header class="site-header">
+    <a class="brand" href="index.html">Janine Bubner</a>
+    <a class="back-link" href="index.html">Back to homepage →</a>
   </header>
 
   <main>
-    <h1>Imprint</h1>
+    <section class="legal-card">
+      <div class="kicker">Legal Information</div>
+      <h1>Imprint</h1>
 
-    <div class="box">
-      <h2>Website Owner</h2>
+      <div class="gold-heading">Website Owner</div>
       <p>
         Janine Bubner<br>
         1110 N Virgil Ave PMB 94629<br>
@@ -68,33 +123,37 @@
         United States
       </p>
 
-      <h2>Contact</h2>
+      <div class="gold-heading">Contact</div>
       <p>
         For speaking engagements, moderation requests, media inquiries
         and professional collaborations, please use the contact form
         on the homepage.
       </p>
 
-      <h2>Responsible for Content</h2>
+      <div class="gold-heading">Responsible for Content</div>
+      <p>Janine Bubner</p>
+
+      <div class="gold-heading">Disclaimer</div>
       <p>
-        Janine Bubner
+        The content of this website is provided for general informational purposes.
+        While care is taken to keep information accurate and up to date, no liability
+        is accepted for the completeness, accuracy or availability of the content.
       </p>
 
-      <h2>Disclaimer</h2>
+      <div class="gold-heading">External Links</div>
       <p>
-        The content of this website is provided for general informational purposes. While care is taken to keep information accurate and up to date, no liability is accepted for the completeness, accuracy or availability of the content.
+        This website may contain links to external websites. The website owner has
+        no influence over the content of external websites and is not responsible
+        for their content.
       </p>
 
-      <h2>External Links</h2>
+      <div class="gold-heading">Copyright</div>
       <p>
-        This website may contain links to external websites. The website owner has no influence over the content of external websites and is not responsible for their content.
+        All content, images, text and design elements on this website are protected
+        by copyright unless otherwise stated. Any use, reproduction or distribution
+        requires prior written permission.
       </p>
-
-      <h2>Copyright</h2>
-      <p>
-        All content, images, text and design elements on this website are protected by copyright unless otherwise stated. Any use, reproduction or distribution requires prior written permission.
-      </p>
-    </div>
+    </section>
   </main>
 
   <footer>

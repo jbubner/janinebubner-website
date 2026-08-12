@@ -1,0 +1,14 @@
+UPLOAD ALL FILES IN THIS FOLDER TO THE ROOT OF YOUR GITHUB REPOSITORY.
+
+Files:
+- speaking.html
+- summit.html
+- janine-bubner-ai-sdv-summit-2026.pdf
+- all stuttgart-*.jpg images
+
+They must sit beside index.html, not inside the api folder.
+
+After Vercel deploys, test:
+https://janinebubner.com/speaking.html
+https://janinebubner.com/summit.html
+https://janinebubner.com/janine-bubner-ai-sdv-summit-2026.pdf
